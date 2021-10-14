@@ -1,25 +1,30 @@
-<u> **Project Timeline** </u>
+# Project Timeline
 
-Potential role Allocation
-Write Questions
-Email Jonny
+* Potential role Allocation
+* Write Questions
+* Email Jonny
+
 **----MONDAY 18TH OCT----**
+<br />
+* Start Requirement Speciforcation
+* Introduction
+    * Overview and justification (purpose) 
+    * Project scope 
+    * System description
 
-Start Requirement Speciforcation
-Introduction
-    1. Overview and justification (purpose) 
-    2. Project scope 
-    3.System description 
 **----MONDAY 25TH OCT----**
+<br />
+* Project Development
+    * Development approach
+    * Project Schedule
 
-Project Development
-    1.Development approach
-    2.Project Schedule 
 **----Friday 29TH OCT----**
+<br />
+* Work on Writing Skills and Presentation of Document 
+* Any Next steps
 
-Work on Writing Skills and Presentation of Document 
-Any Next steps
 **----SUNDAY 31ST OCT----**
+<br />
 Completed by: 31ST OCT
-
+<br />
 **HANDIN DATE: 4TH NOVEMVER**
