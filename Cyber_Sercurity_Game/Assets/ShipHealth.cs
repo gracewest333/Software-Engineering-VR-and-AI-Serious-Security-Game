@@ -15,14 +15,14 @@ public class ShipHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            TakeDamage(5);
-        }
-    }
+    //void Update()
+    //{
+        //if (Input.GetKeyDown(KeyCode.Space)){
+            //TakeDamage(5);
+        //}
+    //}
 
-    void TakeDamage(int damage){
+    public void TakeDamage(int damage){
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
     }

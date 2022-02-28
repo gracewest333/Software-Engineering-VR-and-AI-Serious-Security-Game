@@ -15,22 +15,22 @@ public class UpdateScore : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q)){
-            IncreaseScore(10);
-        }
-        if (Input.GetKeyDown(KeyCode.W)){
-            DecreaseScore(10);
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Q)){
+    //        IncreaseScore(10);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.W)){
+    //        DecreaseScore(10);
+    //    }
+    //}
 
-    void IncreaseScore(int change){
+    public void IncreaseScore(int change){
         score += change;
         scoreText.text=score.ToString();
     }
 
-    void DecreaseScore(int change){
+    public void DecreaseScore(int change){
         score -= change;
         scoreText.text=score.ToString();
     }

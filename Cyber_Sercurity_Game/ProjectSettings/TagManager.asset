@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - threat
+  - ship
+  - encrypter
+  - firewall
+  - AntiMalware
+  - AccessManagement
+  - WebFiltering
+  - health_bar
+  - score
   layers:
   - Default
   - TransparentFX
