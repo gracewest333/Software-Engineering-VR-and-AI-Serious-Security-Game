@@ -2,7 +2,14 @@
 using System.Collections;
 
 public class ShootableBox : MonoBehaviour {
-	public int currentHealth = 3;
+
+
+	public string current_gun = "AccessManagement";
+	public string defeated_by_gun = "firewall";
+
+
+
+	public int currentHealth = 1;
 	public GameObject explosion;
 	private Vector3 vec;
 	
@@ -15,7 +22,12 @@ public class ShootableBox : MonoBehaviour {
 
 	public void Damage(int damageAmount)
 	{
-		currentHealth -= damageAmount;
+		current_gun = GameObject.FindGameObjectWithTag("selected_gun").GetComponent<Change_gun>().selected_gun;
+
+		if (defeated_by_gun == current_gun){
+			currentHealth -= damageAmount;
+		}
+		
 
 		if (currentHealth <= 0) 
 		{

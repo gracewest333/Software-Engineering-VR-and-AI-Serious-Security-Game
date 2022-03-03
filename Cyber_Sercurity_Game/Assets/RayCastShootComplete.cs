@@ -3,7 +3,6 @@ using System.Collections;
 
 public class RayCastShootComplete : MonoBehaviour {
 
-
 	public AudioClip zap;
 	public int gunDamage = 1;											// Set the number of hitpoints that this gun will take away from shot objects with a health script
 	public float fireRate = 0.25f;										// Number in seconds which controls how often the player can fire

@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7487410016653510205, guid: 9e6401f8e2320e54797a680db42d218f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b503cbe238b332f46bc0b1dce99f4e4f, type: 2}
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_RootOrder
@@ -75,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7487410016656624447, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_Name
-      value: Monster_Threat
+      value: Ship freeze attack
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656624447, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
@@ -145,7 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5a2cd8e323b3b42a7f5a6c5d0e58a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
+  current_gun: AccessManagement
+  defeated_by_gun: firewall
+  currentHealth: 1
   explosion: {fileID: 8176782618925023889, guid: a30934afc672010449fc5bd2e1d9ef73,
     type: 3}
 --- !u!114 &-5083073844664017226
