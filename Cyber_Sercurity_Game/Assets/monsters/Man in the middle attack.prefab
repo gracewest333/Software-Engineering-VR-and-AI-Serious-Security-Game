@@ -21,7 +21,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b87f4b7ff947efd4dad7c4adaf251043, type: 2}
+      objectReference: {fileID: 2100000, guid: 9552f7479dce92645887c7b6c72ccaac, type: 2}
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_RootOrder
@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7487410016656624447, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_Name
-      value: Phishing attack 1
+      value: Man in the middle attack
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656624447, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_gun: AccessManagement
-  defeated_by_gun: WebFiltering
+  defeated_by_gun: encrypter
   currentHealth: 1
   explosion: {fileID: 8176782618925023889, guid: a30934afc672010449fc5bd2e1d9ef73,
     type: 3}
