@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.92
+      value: -6.63
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current_gun: AccessManagement
   defeated_by_gun: encrypter
-  currentHealth: 1
+  currentHealth: 3
   explosion: {fileID: 8176782618925023889, guid: a30934afc672010449fc5bd2e1d9ef73,
     type: 3}
 --- !u!114 &-5083073844664017226

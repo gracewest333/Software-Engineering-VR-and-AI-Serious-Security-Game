@@ -30,17 +30,17 @@ PrefabInstance:
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.62996
+      value: -23.952
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.92
+      value: -5.192
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.172344
+      value: 15.046
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656463647, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7487410016656624447, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
       propertyPath: m_Name
-      value: Ship freeze attack
+      value: Denial of service attack
       objectReference: {fileID: 0}
     - target: {fileID: 7487410016656624447, guid: 9e6401f8e2320e54797a680db42d218f,
         type: 3}
