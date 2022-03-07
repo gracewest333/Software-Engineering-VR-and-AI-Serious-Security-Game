@@ -6,15 +6,16 @@ public class ShipHealth : MonoBehaviour
 {
 
     public int maxHealth=100;
-    public int currentHealth;
+    public int currentHealth=2;
     public HealthBar healthBar;
     public GameObject TeamMate;
     public bool RepairedShip=false;
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth=maxHealth;
+        //currentHealth=maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        healthBar.setHealth(currentHealth);
     }
 
     // Update is called once per frame
