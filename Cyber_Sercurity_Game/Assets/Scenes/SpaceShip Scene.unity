@@ -151,7 +151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8322506
 GameObject:
@@ -206,7 +206,7 @@ Transform:
   - {fileID: 1003832428}
   - {fileID: 634004663}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8322509
 MonoBehaviour:
@@ -1434,7 +1434,7 @@ PrefabInstance:
     - target: {fileID: 8940531463225167048, guid: 7b520f84bb08e2342b1d6cfbe5ccdad6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8940531463225167048, guid: 7b520f84bb08e2342b1d6cfbe5ccdad6,
         type: 3}
@@ -4621,7 +4621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &472040130 stripped
 Transform:
@@ -6269,7 +6269,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &712691841
 PrefabInstance:
@@ -6529,6 +6529,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726377398}
   m_CullTransparentMesh: 1
+--- !u!1 &727486900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2217178116069817838, guid: a411b7bdc0d04a242a520d1fec5c70bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 827588718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &728020554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4477030707949804, guid: 00debf980412c49418327c56a1a60db0,
@@ -7230,7 +7236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &817045460
 PrefabInstance:
@@ -7247,7 +7253,7 @@ PrefabInstance:
     - target: {fileID: 8940531463225167048, guid: 76c4780262b93dd41b617e3152270adc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8940531463225167048, guid: 76c4780262b93dd41b617e3152270adc,
         type: 3}
@@ -7501,6 +7507,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2217178116069817838, guid: a411b7bdc0d04a242a520d1fec5c70bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7325064825324291051, guid: a411b7bdc0d04a242a520d1fec5c70bc,
         type: 3}
       propertyPath: m_Name
@@ -8018,7 +8029,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1991372802}
-  TeamMate: {fileID: 2113139507}
+  TeamMate: {fileID: 727486900}
   RepairedShip: 0
 --- !u!4 &872130202
 Transform:
@@ -8032,7 +8043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &882246013
 PrefabInstance:
@@ -13204,7 +13215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1516227180
 PrefabInstance:
@@ -13978,7 +13989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b504baa6ea89cd840847a271da871e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2113139507}
+  player: {fileID: 8322506}
 --- !u!114 &1586509352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13991,8 +14002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705198dac80a61649911a8272ea63ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TeamMember: {fileID: 7325064825324291051, guid: a411b7bdc0d04a242a520d1fec5c70bc,
-    type: 3}
+  TeamMember: {fileID: 727486900}
+  appeared: 0
 --- !u!4 &1586509353
 Transform:
   m_ObjectHideFlags: 0
@@ -14005,7 +14016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1595936896 stripped
 Transform:
@@ -14439,7 +14450,7 @@ PrefabInstance:
     - target: {fileID: 8940531463225167048, guid: e42b34be716b8d348acb3e77b6a79c35,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8940531463225167048, guid: e42b34be716b8d348acb3e77b6a79c35,
         type: 3}
@@ -14697,7 +14708,7 @@ Transform:
   - {fileID: 23394592}
   - {fileID: 1153158166}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1664223559
 PrefabInstance:
@@ -14799,7 +14810,7 @@ RectTransform:
   - {fileID: 2011283107}
   - {fileID: 978827358}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18475,7 +18486,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1991372802}
-  TeamMate: {fileID: 2113139507}
+  TeamMate: {fileID: 727486900}
   RepairedShip: 0
 --- !u!4 &1994859219 stripped
 Transform:
@@ -18846,7 +18857,7 @@ PrefabInstance:
     - target: {fileID: 8940531463225167048, guid: 445428e3da005b94b9a7b0159efe6cd6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8940531463225167048, guid: 445428e3da005b94b9a7b0159efe6cd6,
         type: 3}
@@ -19443,12 +19454,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a68610f59a4280429c8b2d0813fc135, type: 3}
---- !u!1 &2113139507 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7325064825324291051, guid: a411b7bdc0d04a242a520d1fec5c70bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 827588718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2119527113
 PrefabInstance:
   m_ObjectHideFlags: 0

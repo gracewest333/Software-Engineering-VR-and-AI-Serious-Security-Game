@@ -15,6 +15,7 @@ TagManager:
   - health_bar
   - score
   - selected_gun
+  - Team_member
   layers:
   - Default
   - TransparentFX
