@@ -17,6 +17,7 @@ TagManager:
   - selected_gun
   - Team_member
   - Event
+  - pointer
   layers:
   - Default
   - TransparentFX

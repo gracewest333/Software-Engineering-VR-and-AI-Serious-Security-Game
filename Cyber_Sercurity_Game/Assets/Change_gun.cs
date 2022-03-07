@@ -41,7 +41,9 @@ public class Change_gun : MonoBehaviour
             Object.GetComponent<LineRenderer> ().material = purple;
             selected_gun= "WebFiltering";            
             }
-
+        if (Input.GetKeyDown(KeyCode.N)){
+            selected_gun= "pointer";            
+            }
  
     }
 
