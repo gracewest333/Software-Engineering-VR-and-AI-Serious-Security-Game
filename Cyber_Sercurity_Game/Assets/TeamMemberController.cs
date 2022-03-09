@@ -35,10 +35,4 @@ public class TeamMemberController : MonoBehaviour
     transform.rotation= Quaternion.Slerp(transform.rotation,lookRotation,Time.deltaTime * 5f);
   }
 
-
-  void OnDrawGizmosSelected(){
-    Gizmos.color=Color.red;
-    Gizmos.DrawWireSphere(transform.position,lookRadius);
-  }
-
 }
