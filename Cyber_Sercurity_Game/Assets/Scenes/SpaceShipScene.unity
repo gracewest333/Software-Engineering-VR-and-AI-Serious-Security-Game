@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28461978, g: 0.37120783, b: 0.49880326, a: 1}
+  m_IndirectSpecularColor: {r: 0.28462112, g: 0.37120938, b: 0.49880487, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2826,6 +2826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CointsTXT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851868640692856894, guid: 188a436d09e8926449654745cf232dbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1851868640692856895, guid: 188a436d09e8926449654745cf232dbb,
         type: 3}

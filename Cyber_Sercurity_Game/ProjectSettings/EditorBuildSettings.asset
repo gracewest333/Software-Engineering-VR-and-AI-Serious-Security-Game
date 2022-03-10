@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/welcomescence.unity
+    guid: 3328dd06e8bc4f7469d6cb8425a2fc3b
+  - enabled: 1
+    path: Assets/Scenes/SpaceShipScene.unity
+    guid: 6896fee976c0b194cb26dfcff4ee222e
+  - enabled: 1
+    path: Assets/Scenes/warningscreen.unity
+    guid: f2e8ba75f0176db408c21d4e44570beb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
