@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipHealth : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ShipHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         currentHealth=maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
@@ -20,12 +22,16 @@ public class ShipHealth : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
 
         if (TeamMate.activeSelf && RepairedShip == false){
             currentHealth=maxHealth;
             healthBar.setHealth(currentHealth);
             RepairedShip=true;
+        }
+
+        if (currentHealth <= 0){
+            SceneManager.LoadScene("LooseEndPage");
         }
 
     }
