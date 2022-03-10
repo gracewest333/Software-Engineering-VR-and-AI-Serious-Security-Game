@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// credits to https://www.youtube.com/watch?v=u0yksFw9PSs&t=402s
+using UnityEngine;
 using System.Collections;
 
 public class RayViewerComplete : MonoBehaviour {

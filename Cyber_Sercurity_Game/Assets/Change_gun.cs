@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// VILDE TO CHNAGE THIS, ONCE WORKING PLS CAN YOU COMMENT THE CODE!! :)
+
 public class Change_gun : MonoBehaviour
 {
     public string selected_gun= "AccessManagement";

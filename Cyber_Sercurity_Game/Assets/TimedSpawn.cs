@@ -9,6 +9,7 @@ using System;
 
 public class TimedSpawn : MonoBehaviour {
 
+    // each threat prefab
     public GameObject hacker;
     public GameObject sql;
     public GameObject man_middle;
@@ -16,6 +17,8 @@ public class TimedSpawn : MonoBehaviour {
     public GameObject denial_of_service;
     public GameObject phishing;
 
+
+    // chooses a random number, depending on what number is, chooses what threat is spawned
     int number=1 ;
     
 
@@ -28,10 +31,12 @@ public class TimedSpawn : MonoBehaviour {
 		InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
 	}
 	
+    // genporates a random threat 
     public void SpawnObject() {
-        //using Random = System.Random;
+        // generates a random number
         System.Random random = new System.Random();
         int number = random.Next(1, 7);
+        //depending on the number, chooses the next threat
         switch (number){
             case 1:
                 Instantiate(hacker, transform.position, transform.rotation);
