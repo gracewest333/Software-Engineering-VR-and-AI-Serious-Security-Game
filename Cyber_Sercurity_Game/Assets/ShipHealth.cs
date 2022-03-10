@@ -21,12 +21,8 @@ public class ShipHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            TakeDamage(5);
-        }
 
         if (TeamMate.activeSelf && RepairedShip == false){
-            RepairShip(10);
             currentHealth=maxHealth;
             healthBar.setHealth(currentHealth);
             RepairedShip=true;
@@ -38,8 +34,4 @@ public class ShipHealth : MonoBehaviour
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
     }
-    void RepairShip(int RepairVal){
-        currentHealth += RepairVal;
-        healthBar.setHealth(currentHealth);
-    }   
 }
