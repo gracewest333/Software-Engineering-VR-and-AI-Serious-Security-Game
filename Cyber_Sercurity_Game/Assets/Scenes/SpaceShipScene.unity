@@ -14279,7 +14279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 729415328}
-  score: 250
+  score: 0
 --- !u!4 &1512474161
 Transform:
   m_ObjectHideFlags: 0
@@ -15056,7 +15056,7 @@ GameObject:
   - component: {fileID: 1586509352}
   - component: {fileID: 1586509351}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
