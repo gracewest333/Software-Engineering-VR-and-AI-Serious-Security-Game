@@ -8,10 +8,10 @@ public class TeamMemberAppear : MonoBehaviour
     public bool appeared=false;
     
    //MEENAL WILL CHANGE 
-    void Update()
+    public void Spawn()
     {
-        //when the button L is pressed and the ship engineer isnt already active set him to active
-        if (Input.GetKeyDown (KeyCode.L) && appeared == false) {
+        //to be activated in the editor 
+        if (appeared == false) {
             TeamMember.SetActive(true);
             appeared=true;
         }
