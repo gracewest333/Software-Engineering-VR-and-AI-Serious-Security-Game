@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RayCastShootComplete : MonoBehaviour {
 
+	public AudioClip zap;
 	public int gunDamage = 1;											// Set the number of hitpoints that this gun will take away from shot objects with a health script
 	public float fireRate = 0.25f;										// Number in seconds which controls how often the player can fire
 	public float weaponRange = 50f;										// Distance in Unity units over which the player can fire
@@ -80,7 +81,9 @@ public class RayCastShootComplete : MonoBehaviour {
 
 		// Turn on our line renderer
 		laserLine.enabled = true;
-
+		AudioSource audio = GetComponent<AudioSource>();
+		audio.clip=zap;
+		audio.Play();
 		//Wait for .07 seconds
 		yield return shotDuration;
 
