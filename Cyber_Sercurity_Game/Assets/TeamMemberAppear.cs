@@ -6,11 +6,12 @@ public class TeamMemberAppear : MonoBehaviour
 {
     public GameObject TeamMember;
     public bool appeared=false;
-   
-
-    void Update()
+    
+   //MEENAL WILL CHANGE 
+    public void Spawn()
     {
-        if (Input.GetKeyDown (KeyCode.L) && appeared == false) {
+        //to be activated in the editor 
+        if (appeared == false) {
             TeamMember.SetActive(true);
             appeared=true;
         }
@@ -18,3 +19,5 @@ public class TeamMemberAppear : MonoBehaviour
 
 
 }
+
+//credit to https://youtu.be/xppompv1DBg
