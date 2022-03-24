@@ -2,10 +2,12 @@
 //https://www.youtube.com/watch?v=1h2yStilBWU
 
 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class TimedSpawn : MonoBehaviour {
 
@@ -17,53 +19,115 @@ public class TimedSpawn : MonoBehaviour {
     public GameObject denial_of_service;
     public GameObject phishing;
 
+    public GameObject new_threat_hacker;
+    public GameObject new_threat_sql;
+    public GameObject new_threat_man_middle;
+    public GameObject new_threat_malware;
+    public GameObject new_threat_denial_of_service;
+    public GameObject new_threat_phishing;
 
-    // chooses a random number, depending on what number is, chooses what threat is spawned
-    int number=1 ;
-    
+
+    int wave=0;
+    int number_so_far=0;
+    int random_threat=1;
+
 
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
 
-	// Use this for initialization
 	void Start () {
 		InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
 	}
 	
     // genporates a random threat 
     public void SpawnObject() {
-        // generates a random number
         System.Random random = new System.Random();
-        int number = random.Next(1, 7);
-        //depending on the number, chooses the next threat
-        switch (number){
+
+        if (number_so_far %2 ==0){
+            switch (wave){
+                case 0:
+                    new_threat_malware.SetActive(true);
+                    wave = wave +1;
+                    break;
+                case 1:
+                    wave = wave +1;
+                    new_threat_sql.SetActive(true);
+                    break;
+                case 2:
+                    wave = wave +1;
+                    new_threat_man_middle.SetActive(true);
+                    break;
+                case 3:
+                    wave = wave +1;
+                    new_threat_hacker.SetActive(true);
+                    break;
+                case 4:
+                    wave = wave +1;
+                    new_threat_denial_of_service.SetActive(true);
+                    break;
+                case 5:
+                    wave = wave +1;
+                     new_threat_phishing.SetActive(true);
+                    break;
+                case 6:
+                    wave = wave +1;
+                    break;
+            }
+        } 
+
+
+        switch (wave){
             case 1:
-                Instantiate(hacker, transform.position, transform.rotation);
                 break;
-
             case 2:
-                Instantiate(sql, transform.position, transform.rotation);
+                random_threat = random.Next(1, 3);
                 break;
-
             case 3:
-                Instantiate(man_middle, transform.position, transform.rotation);
+                random_threat = random.Next(1, 4);
                 break;
-
             case 4:
-                Instantiate(malware, transform.position, transform.rotation);
+                random_threat = random.Next(1, 5);
                 break;
-
             case 5:
-                Instantiate(denial_of_service, transform.position, transform.rotation);
+                random_threat = random.Next(1, 6);
                 break;
-            
             case 6:
-                Instantiate(phishing, transform.position, transform.rotation);
+                random_threat = random.Next(1, 7);
                 break;
 
         } 
-        
+
+        switch (random_threat){
+            case 1:
+                Instantiate(malware, transform.position, transform.rotation);
+                number_so_far=number_so_far+1;
+                break;
+            case 2:
+                Instantiate(sql, transform.position, transform.rotation);
+                number_so_far=number_so_far+1;
+                break;
+            case 3:
+                Instantiate(man_middle, transform.position, transform.rotation);
+                number_so_far=number_so_far+1;
+                break;
+            case 4:
+                Instantiate(hacker, transform.position, transform.rotation);
+                number_so_far=number_so_far+1;
+                break;
+            case 5:
+                Instantiate(denial_of_service, transform.position, transform.rotation);
+                number_so_far=number_so_far+1;
+                break;
+            case 6:
+                Instantiate(phishing, transform.position, transform.rotation);
+                number_so_far=number_so_far+1;
+                break;
+
+        } 
+        if (wave>6){
+            SceneManager.LoadScene("WinEndPage");
+        }        
         
         if(stopSpawning) {
             
