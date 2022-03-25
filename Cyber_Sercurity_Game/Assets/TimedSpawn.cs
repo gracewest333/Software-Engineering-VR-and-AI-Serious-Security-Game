@@ -20,6 +20,7 @@ public class TimedSpawn : MonoBehaviour {
     public GameObject malware;
     public GameObject denial_of_service;
     public GameObject phishing;
+    
 
     public GameObject new_threat_hacker;
     public GameObject new_threat_sql;
@@ -28,6 +29,8 @@ public class TimedSpawn : MonoBehaviour {
     public GameObject new_threat_denial_of_service;
     public GameObject new_threat_phishing;
 
+    public GameObject cryptographer;
+    int crypto_spawn=1;
 
     int wave=0;
     int number_so_far=0;
@@ -37,6 +40,7 @@ public class TimedSpawn : MonoBehaviour {
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
+
 
 	void Start () {
 		InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
@@ -98,35 +102,48 @@ public class TimedSpawn : MonoBehaviour {
                 random_threat = random.Next(1, 7);
                 break;
 
-        } 
+        }
 
+        
+        crypto_spawn=random.Next(1,11);
+        if (cryptographer.activeInHierarchy == true && crypto_spawn % 3 == 0){
+            transform.rotation = new Quaternion (0,90,0,0);
+        }
+        else{
+            transform.rotation = new Quaternion (0, 45, 0, 45);
+        }
         switch (random_threat){
             case 1:
                 Instantiate(malware, transform.position, transform.rotation);
+                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
                 break;
             case 2:
                 Instantiate(sql, transform.position, transform.rotation);
+                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
                 break;
             case 3:
                 Instantiate(man_middle, transform.position, transform.rotation);
+                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
                 break;
             case 4:
                 Instantiate(hacker, transform.position, transform.rotation);
+                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
                 break;
             case 5:
                 Instantiate(denial_of_service, transform.position, transform.rotation);
+                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
                 break;
             case 6:
                 Instantiate(phishing, transform.position, transform.rotation);
+                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
-                break;
-
-        } 
+                break; 
+        }
         if (wave>6){
             SceneManager.LoadScene("WinEndPage");
         }        
