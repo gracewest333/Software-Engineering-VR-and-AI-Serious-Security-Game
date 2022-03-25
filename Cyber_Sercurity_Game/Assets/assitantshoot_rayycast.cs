@@ -1,9 +1,9 @@
-﻿// credits to https://www.youtube.com/watch?v=u0yksFw9PSs&t=402s
+// credits to https://www.youtube.com/watch?v=u0yksFw9PSs&t=402s
 
 using UnityEngine;
 using System.Collections;
 
-public class RayCastShootComplete : MonoBehaviour {
+public class assitantshoot_rayycast : MonoBehaviour {
 
 	public AudioClip zap;
 	public int gunDamage = 1;											// Set the number of hitpoints that this gun will take away from shot objects with a health script
@@ -14,8 +14,10 @@ public class RayCastShootComplete : MonoBehaviour {
 	public Camera fpsCam;												// Holds a reference to the first person camera
 
 	
-	public bool hit_threat=false;
-	public Vector3 hit_point;
+    RayCastShootComplete player_gun;
+ 
+
+
 
 	private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);	// WaitForSeconds object used by our ShotEffect coroutine, determines time laser line will remain visible
 	private LineRenderer laserLine;										// Reference to the LineRenderer component which will display our laserline
@@ -26,8 +28,7 @@ public class RayCastShootComplete : MonoBehaviour {
 	{
 		// Get and store a reference to our LineRenderer component
 		laserLine = GetComponent<LineRenderer>();
-		
-
+        player_gun= GameObject.FindGameObjectWithTag("selected_gun").GetComponent<RayCastShootComplete>();
 	}
 	
 
@@ -54,9 +55,6 @@ public class RayCastShootComplete : MonoBehaviour {
 			// Check if our raycast has hit anything
 			if (Physics.Raycast (pos, fpsCam.transform.forward, out hit, weaponRange))
 			{
-				hit_threat=true;
-				hit_point=hit.point;
-
 				// Set the end position for our laser line 
 				laserLine.SetPosition (1, hit.point);
 
@@ -69,14 +67,44 @@ public class RayCastShootComplete : MonoBehaviour {
 					health.Damage (gunDamage);
 				}
 
-				
 			}
 			else
 			{
-				hit_threat=false;
-				// If we did not hit anything, set the end of the line to a position directly in front of the camera at the distance of weaponRange
-                laserLine.SetPosition (1, pos + (fpsCam.transform.forward * weaponRange));
+                if (player_gun.hit_threat== true){
+                    laserLine.SetPosition (1,player_gun.hit_point);
+                    if (Physics.Raycast (pos, fpsCam.transform.forward, out hit, weaponRange))
+			        {
+				        // Set the end position for our laser line 
+				        laserLine.SetPosition (1, hit.point);
+
+				        // Get a reference to a health script attached to the collider we hit
+				        ShootableBox health = hit.collider.GetComponent<ShootableBox>();
+				        // If there was a health script attached
+				        if (health != null)
+				        {
+					        // Call the damage function of that script, passing in our gunDamage variable
+					        health.Damage (gunDamage);
+				        }
+
+			        }
+                }
+                else{
+                    // If we did not hit anything, set the end of the line to a position directly in front of the camera at the distance of weaponRange
+                    laserLine.SetPosition (1, pos + (fpsCam.transform.forward * weaponRange));
+                }
 			}
+
+
+
+            
+
+
+
+
+
+
+
+
 		}
 	}
 

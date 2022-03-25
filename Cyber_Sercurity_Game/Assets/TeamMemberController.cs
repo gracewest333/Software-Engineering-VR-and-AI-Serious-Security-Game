@@ -18,6 +18,11 @@ public class TeamMemberController : MonoBehaviour
 
 
   void Update(){
+
+    //if (Input.GetKeyDown(KeyCode.L)){
+      
+
+
     //get the distance from team member to player as float
     float distance = Vector3.Distance(target.position, transform.position);
 

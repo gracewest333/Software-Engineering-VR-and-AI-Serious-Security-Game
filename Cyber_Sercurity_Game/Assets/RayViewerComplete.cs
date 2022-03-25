@@ -6,20 +6,11 @@ public class RayViewerComplete : MonoBehaviour {
 
     public float weaponRange = 50f;                       // Distance in Unity units over which the Debug.DrawRay will be drawn
     public Camera fpsCam;                                // Holds a reference to the first person camera
-    public GameObject gunEnd;	
+    public GameObject gunEnd;
 
-    Vector3 pos;
+    public Vector3 pos;
 
 
-
-    void Start ()
-
-    {
-        pos= new Vector3 (-16f,-9f,12f);
-
-    }
-
-	
 	void Update () 
     {
         // Create a vector at the center of our camera's viewport
