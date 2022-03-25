@@ -12,6 +12,8 @@ using UnityEngine.SceneManagement;
 public class TimedSpawn : MonoBehaviour {
 
     // each threat prefab
+    public int wave_lenghth = 5;
+
     public GameObject hacker;
     public GameObject sql;
     public GameObject man_middle;
@@ -44,7 +46,7 @@ public class TimedSpawn : MonoBehaviour {
     public void SpawnObject() {
         System.Random random = new System.Random();
 
-        if (number_so_far %2 ==0){
+        if (number_so_far % wave_lenghth ==0){
             switch (wave){
                 case 0:
                     new_threat_malware.SetActive(true);
