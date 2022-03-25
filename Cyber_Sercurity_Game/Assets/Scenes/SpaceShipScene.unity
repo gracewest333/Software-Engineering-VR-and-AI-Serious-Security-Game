@@ -6657,6 +6657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6240f5670c30dc54498011f4ebc37e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave_lenghth: 5
   hacker: {fileID: 8940531463225004264, guid: 839c85822782cda449da148d59457fa0, type: 3}
   sql: {fileID: 8940531463225004264, guid: 76c4780262b93dd41b617e3152270adc, type: 3}
   man_middle: {fileID: 8940531463225004264, guid: e42b34be716b8d348acb3e77b6a79c35,
@@ -12728,7 +12729,7 @@ PrefabInstance:
     - target: {fileID: 2217178116069817829, guid: a411b7bdc0d04a242a520d1fec5c70bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.722
+      value: -3.61
       objectReference: {fileID: 0}
     - target: {fileID: 2217178116069817829, guid: a411b7bdc0d04a242a520d1fec5c70bc,
         type: 3}
@@ -12763,7 +12764,7 @@ PrefabInstance:
     - target: {fileID: 2217178116069817838, guid: a411b7bdc0d04a242a520d1fec5c70bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7325064825324291051, guid: a411b7bdc0d04a242a520d1fec5c70bc,
         type: 3}
@@ -16962,7 +16963,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2e89229997eb0fd4fb0ceb1c61a61593, type: 2}
+      objectReference: {fileID: 2100000, guid: 823d09703e167d646b89b27cc1b2c58b, type: 2}
     - target: {fileID: 919132149155446097, guid: 3b491fefe591cd34c83823cd22208283,
         type: 3}
       propertyPath: m_Name
