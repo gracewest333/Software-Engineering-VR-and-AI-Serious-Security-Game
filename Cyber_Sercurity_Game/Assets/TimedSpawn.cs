@@ -29,8 +29,18 @@ public class TimedSpawn : MonoBehaviour {
     public GameObject new_threat_denial_of_service;
     public GameObject new_threat_phishing;
 
+
+    public GameObject expert_hacker;
+    public GameObject expert_sql;
+    public GameObject expert_man_middle;
+    public GameObject expert_malware;
+    public GameObject expert_denial_of_service;
+    public GameObject expert_phishing;
+
     public GameObject cryptographer;
     int crypto_spawn=1;
+
+    public GameObject SpaceExpert;
 
     int wave=0;
     int number_so_far=0;
@@ -45,6 +55,16 @@ public class TimedSpawn : MonoBehaviour {
 	void Start () {
 		InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
 	}
+
+    public void setInactive(){
+        expert_malware.SetActive(false);
+        expert_sql.SetActive(false);
+        expert_man_middle.SetActive(false);
+        expert_hacker.SetActive(false);
+        expert_denial_of_service.SetActive(false);
+        expert_phishing.SetActive(false);
+
+    }
 	
     // genporates a random threat 
     public void SpawnObject() {
@@ -74,7 +94,7 @@ public class TimedSpawn : MonoBehaviour {
                     break;
                 case 5:
                     wave = wave +1;
-                     new_threat_phishing.SetActive(true);
+                    new_threat_phishing.SetActive(true);
                     break;
                 case 6:
                     wave = wave +1;
@@ -105,6 +125,7 @@ public class TimedSpawn : MonoBehaviour {
         }
 
         
+        setInactive();
         crypto_spawn=random.Next(1,11);
         if (cryptographer.activeInHierarchy == true && crypto_spawn % 3 == 0){
             transform.rotation = new Quaternion (0,90,0,0);
@@ -115,33 +136,45 @@ public class TimedSpawn : MonoBehaviour {
         switch (random_threat){
             case 1:
                 Instantiate(malware, transform.position, transform.rotation);
-                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
+                if (SpaceExpert.activeInHierarchy == true){
+                    expert_malware.SetActive(true);
+                }
                 break;
             case 2:
                 Instantiate(sql, transform.position, transform.rotation);
-                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
+                if (SpaceExpert.activeInHierarchy == true){
+                    expert_sql.SetActive(true);
+                }
                 break;
             case 3:
                 Instantiate(man_middle, transform.position, transform.rotation);
-                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
+                if (SpaceExpert.activeInHierarchy == true){
+                    expert_man_middle.SetActive(true);
+                }
                 break;
             case 4:
                 Instantiate(hacker, transform.position, transform.rotation);
-                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
+                if (SpaceExpert.activeInHierarchy == true){
+                    expert_hacker.SetActive(true);
+                }
                 break;
             case 5:
                 Instantiate(denial_of_service, transform.position, transform.rotation);
-                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
+                if (SpaceExpert.activeInHierarchy == true){
+                    expert_denial_of_service.SetActive(true);
+                }
                 break;
             case 6:
                 Instantiate(phishing, transform.position, transform.rotation);
-                //crypto_spawn=random.Next(1,11);
                 number_so_far=number_so_far+1;
+                if (SpaceExpert.activeInHierarchy == true){
+                    expert_phishing.SetActive(true);
+                }
                 break; 
         }
         if (wave>6){
